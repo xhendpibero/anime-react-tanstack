@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 // react-countup component
 import CountUp from "react-countup";
 
-// Material Kit 2 React components
+// Anime React components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 

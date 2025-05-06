@@ -1,4 +1,4 @@
-// Material Kit 2 React components
+// Anime React components
 import MKBox from "components/MKBox";
 
 // Sections components

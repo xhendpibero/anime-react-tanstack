@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 // @mui material components
 import Icon from "@mui/material/Icon";
 
-// Material Kit 2 React components
+// Anime React components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 

@@ -1,4 +1,4 @@
-// Material Kit 2 React pages
+// Anime React pages
 import Author from "pages/LandingPages/Author";
 
 export default function AuthorPage() {

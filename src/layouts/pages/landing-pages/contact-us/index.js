@@ -1,4 +1,4 @@
-// Material Kit 2 React pages
+// Anime React pages
 import ContactUs from "pages/LandingPages/ContactUs";
 
 export default function ContactUsPage() {

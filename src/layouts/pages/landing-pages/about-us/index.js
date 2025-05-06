@@ -1,4 +1,4 @@
-// Material Kit 2 React pages
+// Anime React pages
 import AboutUs from "pages/LandingPages/AboutUs";
 
 export default function AboutUsPage() {

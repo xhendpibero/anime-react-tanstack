@@ -1,4 +1,4 @@
-// Material Kit 2 React pages
+// Anime React pages
 import Presentation from "pages/Presentation";
 
 export default function PresentationPage() {

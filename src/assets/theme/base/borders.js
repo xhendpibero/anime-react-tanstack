@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Kit 2 React - v2.1.0
+* Anime React - v2.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/material-kit-react
@@ -14,15 +14,15 @@ Coded by www.creative-tim.com
 */
 
 /**
- * The base border styles for the Material Kit 2 React.
+ * The base border styles for the Anime React.
  * You can add new border width, border color or border radius using this file.
- * You can customized the borders value for the entire Material Kit 2 React using thie file.
+ * You can customized the borders value for the entire Anime React using thie file.
  */
 
-// Material Kit 2 React Base Styles
+// Anime React Base Styles
 import colors from "assets/theme/base/colors";
 
-// Material Kit 2 React Helper Functions
+// Anime React Helper Functions
 import pxToRem from "assets/theme/functions/pxToRem";
 
 const { grey } = colors;

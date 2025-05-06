@@ -17,13 +17,13 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Slide from "@mui/material/Slide";
 
-// Material Kit 2 React components
+// Anime React components
 import MKBox from "components/MKBox";
 import MKAlert from "components/MKAlert";
 import MKButton from "components/MKButton";
 import MKTypography from "components/MKTypography";
 
-// Material Kit 2 React base styles
+// Anime React base styles
 import colors from "assets/theme/base/colors";
 
 function View({ children, code, title, height, ...rest }) {

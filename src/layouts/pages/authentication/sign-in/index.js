@@ -1,4 +1,4 @@
-// Material Kit 2 React pages
+// Anime React pages
 import SignIn from "pages/LandingPages/SignIn";
 
 export default function SignInPage() {
