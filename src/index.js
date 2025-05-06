@@ -24,7 +24,7 @@ const container = document.getElementById("root");
 const root = ReactDOMClient.createRoot(container);
 
 root.render(
-  <BrowserRouter basename="material-kit-react">
+  <BrowserRouter>
     <App />
   </BrowserRouter>
 );
