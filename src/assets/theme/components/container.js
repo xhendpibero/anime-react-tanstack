@@ -1,4 +1,3 @@
-
 // Anime React base styles
 import breakpoints from "assets/theme/base/breakpoints";
 
@@ -46,13 +45,13 @@ export default {
   [XL]: {
     ".MuiContainer-root": {
       ...sharedClasses,
-      maxWidth: "1140px !important",
+      maxWidth: "1200px !important",
     },
   },
   [XXL]: {
     ".MuiContainer-root": {
       ...sharedClasses,
-      maxWidth: "1320px !important",
+      maxWidth: "1720px !important",
     },
   },
 };

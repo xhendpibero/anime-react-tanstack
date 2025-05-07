@@ -13,9 +13,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 // Anime React themes
 import theme from "assets/theme";
 import Presentation from "layouts/pages/presentation";
-
-// Anime React routes
-import routes from "routes";
+import AnimeDetailPage from "layouts/pages/presentation/detail";
 
 const queryClient = new QueryClient();
 
@@ -28,26 +26,13 @@ export default function App() {
     document.scrollingElement.scrollTop = 0;
   }, [pathname]);
 
-  const getRoutes = (allRoutes) =>
-    allRoutes.map((route) => {
-      if (route.collapse) {
-        return getRoutes(route.collapse);
-      }
-
-      if (route.route) {
-        return <Route exact path={route.route} element={route.component} key={route.key} />;
-      }
-
-      return null;
-    });
-
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Routes>
-          {getRoutes(routes)}
           <Route path="/" element={<Presentation />} />
+          <Route path="/anime/:id" element={<AnimeDetailPage />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </ThemeProvider>

@@ -21,8 +21,8 @@ function RotatingCard({ color, image, title, description, action }) {
       borderRadius="lg"
       coloredShadow={color}
       position="absolute"
-      width="100%"
-      height="100%"
+      width="16.2rem"
+      height="24rem"
       top={0}
       left={0}
       zIndex={5}
@@ -35,6 +35,12 @@ function RotatingCard({ color, image, title, description, action }) {
         backgroundSize: "cover",
         backfaceVisibility: "hidden",
         transform: "rotateY(180deg)",
+        transition: "all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)",
+        animation: "zoomBackground 20s infinite alternate",
+        "@keyframes zoomBackground": {
+          "0%": { backgroundSize: "100%" },
+          "100%": { backgroundSize: "170%" },
+        },
       }}
     >
       <MKBox pt={4} pb={2} px={2} textAlign="center" lineHeight={1}>
