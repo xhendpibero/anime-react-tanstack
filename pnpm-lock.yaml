@@ -26,6 +26,9 @@ importers:
       '@mui/styled-engine':
         specifier: 5.12.0
         version: 5.12.0(@emotion/react@11.10.6(@types/react@18.3.20)(react@18.2.0))(@emotion/styled@11.10.6(@emotion/react@11.10.6(@types/react@18.3.20)(react@18.2.0))(@types/react@18.3.20)(react@18.2.0))(react@18.2.0)
+      '@tanstack/react-query':
+        specifier: ^5.75.4
+        version: 5.75.4(react@18.2.0)
       '@testing-library/jest-dom':
         specifier: 5.16.5
         version: 5.16.5
@@ -1420,6 +1423,14 @@ packages:
   '@svgr/webpack@5.5.0':
     resolution: {integrity: sha512-DOBOK255wfQxguUta2INKkzPj6AIS6iafZYiYmHn6W3pHlycSRRlvWKCfLDG10fXfLWqE3DJHgRUOyJYmARa7g==}
     engines: {node: '>=10'}
+
+  '@tanstack/query-core@5.75.4':
+    resolution: {integrity: sha512-pcqOUgWG9oGlzkfRQQMMsEFmtQu0wq81A414CtELZGq+ztVwSTAaoB3AZRAXQJs88LmNMk2YpUKuQbrvzNDyRg==}
+
+  '@tanstack/react-query@5.75.4':
+    resolution: {integrity: sha512-Vf65pzYRkf8fk9SP1ncIZjvaXszBhtsvpf+h45Y/9kOywOrVZfBGUpCdffdsVzbmBzmz6TCFes9bM0d3pRrIsA==}
+    peerDependencies:
+      react: ^18 || ^19
 
   '@testing-library/dom@9.3.4':
     resolution: {integrity: sha512-FlS4ZWlp97iiNWig0Muq8p+3rVDjRiYE+YKGbAqXOu9nwJFFOdL00kFpz42M+4huzYi86vAK1sOOfyOG45muIQ==}
@@ -7687,6 +7698,13 @@ snapshots:
       loader-utils: 2.0.4
     transitivePeerDependencies:
       - supports-color
+
+  '@tanstack/query-core@5.75.4': {}
+
+  '@tanstack/react-query@5.75.4(react@18.2.0)':
+    dependencies:
+      '@tanstack/query-core': 5.75.4
+      react: 18.2.0
 
   '@testing-library/dom@9.3.4':
     dependencies:

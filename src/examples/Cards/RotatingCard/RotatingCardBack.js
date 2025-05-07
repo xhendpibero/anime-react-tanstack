@@ -37,7 +37,7 @@ function RotatingCard({ color, image, title, description, action }) {
         transform: "rotateY(180deg)",
       }}
     >
-      <MKBox pt={12} pb={2} px={2} textAlign="center" lineHeight={1}>
+      <MKBox pt={4} pb={2} px={2} textAlign="center" lineHeight={1}>
         <MKTypography variant="h3" color="white" gutterBottom>
           {title}
         </MKTypography>

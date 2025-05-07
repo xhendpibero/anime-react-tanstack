@@ -20,11 +20,8 @@ function DefaultFooter({ content }) {
     <MKBox component="footer">
       <Container>
         <Grid container spacing={3}>
-          <Grid item xs={12} md={3} sx={{ ml: "auto", mb: 3 }}>
+          <Grid item xs={12} md={3} sx={{ mb: 3, mr: "auto" }}>
             <MKBox>
-              <Link to={brand.route}>
-                <MKBox component="img" src={brand.image} alt={brand.name} maxWidth="2rem" mb={2} />
-              </Link>
               <MKTypography variant="h6">{brand.name}</MKTypography>
             </MKBox>
             <MKBox display="flex" alignItems="center" mt={3}>
@@ -98,13 +95,13 @@ function DefaultFooter({ content }) {
                 Distributed by{" "}
                 <MKTypography
                   component="a"
-                  href="https://themewagon.com/"
+                  href="https://github.com/xhendpibero/"
                   target="_blank"
                   rel="noreferrer"
                   variant="button"
                   fontWeight="regular"
                 >
-                  Themewagon
+                  Github
                 </MKTypography>
                 .
               </MKTypography>

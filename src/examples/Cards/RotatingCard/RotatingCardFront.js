@@ -29,7 +29,7 @@ function RotatingCardFront({ color, image, icon, title, description }) {
         backfaceVisibility: "hidden",
       }}
     >
-      <MKBox py={12} px={3} textAlign="center" lineHeight={1}>
+      <MKBox py={8} px={3} textAlign="center" lineHeight={1}>
         {icon && (
           <MKTypography variant="h2" color="white" my={2}>
             {typeof icon === "string" ? <Icon>{icon}</Icon> : icon}

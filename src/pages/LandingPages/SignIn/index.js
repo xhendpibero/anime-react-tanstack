@@ -1,18 +1,3 @@
-/**
-=========================================================
-* Anime React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 import { useState } from "react";
 
 // react-router-dom components
@@ -36,11 +21,11 @@ import MKInput from "components/MKInput";
 import MKButton from "components/MKButton";
 
 // Anime React example components
-import DefaultNavbar from "examples/Navbars/DefaultNavbar";
+// import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import SimpleFooter from "examples/Footers/SimpleFooter";
 
 // Anime React page layout routes
-import routes from "routes";
+// import routes from "routes";
 
 // Images
 import bgImage from "assets/images/bg-sign-in-basic.jpeg";
@@ -52,7 +37,7 @@ function SignInBasic() {
 
   return (
     <>
-      <DefaultNavbar
+      {/* <DefaultNavbar
         routes={routes}
         action={{
           type: "external",
@@ -62,7 +47,7 @@ function SignInBasic() {
         }}
         transparent
         light
-      />
+      /> */}
       <MKBox
         position="absolute"
         top={0}
