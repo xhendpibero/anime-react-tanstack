@@ -1,4 +1,4 @@
-// Anime React pages
+// AnimeHub pages
 import Presentation from "pages/Presentation";
 
 export default function PresentationPage() {

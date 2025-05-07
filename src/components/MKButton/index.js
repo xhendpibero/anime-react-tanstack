@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Anime React - v2.1.0
+* AnimeHub - v2.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react

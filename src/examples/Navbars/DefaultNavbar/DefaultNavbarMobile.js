@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 
 // react-router components
@@ -11,11 +10,11 @@ import PropTypes from "prop-types";
 import Collapse from "@mui/material/Collapse";
 import MuiLink from "@mui/material/Link";
 
-// Anime React components
+// AnimeHub components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
-// Anime React example components
+// AnimeHub example components
 import DefaultNavbarDropdown from "examples/Navbars/DefaultNavbar/DefaultNavbarDropdown";
 
 function DefaultNavbarMobile({ routes, open }) {

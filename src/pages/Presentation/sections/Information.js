@@ -8,7 +8,7 @@ import Grid from "@mui/material/Grid";
 import CircularProgress from "@mui/material/CircularProgress";
 import Alert from "@mui/material/Alert";
 
-// Anime React components
+// AnimeHub components
 import MKBox from "components/MKBox";
 import RotatingCard from "examples/Cards/RotatingCard";
 import RotatingCardFront from "examples/Cards/RotatingCard/RotatingCardFront";
@@ -54,7 +54,7 @@ function Information({ animeList, isLoading, error }) {
       <Container maxWidth="false">
         <Grid container spacing={3} alignItems="center" sx={{ mx: "auto" }}>
           {animeList.map((anime, zIndex) => (
-            <Grid item key={anime.mal_id + zIndex}>
+            <Grid item key={anime.mal_id + zIndex + anime.rank}>
               <RotatingCard>
                 <RotatingCardFront
                   image={anime.images?.jpg?.image_url || bgFront}

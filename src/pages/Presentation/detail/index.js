@@ -17,7 +17,7 @@ import StarIcon from "@mui/icons-material/Star";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
-// Anime React components
+// AnimeHub components
 import MKBox from "components/MKBox";
 import MKButton from "components/MKButton";
 import MKTypography from "components/MKTypography";
@@ -35,8 +35,6 @@ function AnimeDetail() {
     queryFn: () => getAnimeDetail(id),
     staleTime: 600000, // 10 minutes
   });
-
-  console.log({ data, id });
 
   const anime = data?.data;
 
@@ -110,23 +108,68 @@ function AnimeDetail() {
           },
         }}
       >
-        {/* Back button */}
-        <MKBox position="absolute" top="3.3rem" left="2.4rem" zIndex={3}>
-          <MKButton
-            variant="gradient"
-            color="white"
-            circular
-            iconOnly
-            onClick={handleGoBack}
-            sx={{ boxShadow: "0 0 10px rgba(0,0,0,0.3)" }}
-          >
-            <ArrowBackIcon />
-          </MKButton>
-        </MKBox>
-
         {/* Main content */}
         <Container sx={{ position: "relative", zIndex: 2, height: "100%" }}>
           <Grid container spacing={4} minHeight="85vh" alignItems="center">
+            <MKBox position="absolute" top={{ xs: "14rem" }} left={{ xs: "1.4rem" }} zIndex={3}>
+              <MKButton
+                variant="gradient"
+                color="white"
+                circular
+                onClick={handleGoBack}
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  padding: { xs: "10px", md: "12px" },
+                  boxShadow: "0 8px 20px rgba(0,0,0,0.2)",
+                  backgroundColor: "rgba(255,255,255,0.9)",
+                  backdropFilter: "blur(10px)",
+                  border: "1px solid rgba(255,255,255,0.3)",
+                  transition: "all 0.3s ease",
+                  overflow: "hidden",
+                  "&:hover": {
+                    transform: "translateY(-3px)",
+                    boxShadow: "0 12px 28px rgba(0,0,0,0.25)",
+                    backgroundColor: "rgba(255,255,255,1)",
+                    "& .back-text": {
+                      maxWidth: "100px",
+                      opacity: 1,
+                      marginLeft: "8px",
+                    },
+                  },
+                  "&:active": {
+                    transform: "translateY(-1px)",
+                    boxShadow: "0 5px 15px rgba(0,0,0,0.2)",
+                  },
+                }}
+              >
+                <ArrowBackIcon
+                  sx={{
+                    fontSize: { xs: "1.5rem", md: "1.8rem" },
+                    color: "#555",
+                    transition: "transform 0.2s ease",
+                    ".MuiButton-root:hover &": {
+                      transform: "translateX(-2px)",
+                    },
+                  }}
+                />
+                <MKTypography
+                  variant="button"
+                  fontWeight="medium"
+                  className="back-text"
+                  sx={{
+                    maxWidth: { xs: "0", md: "0" },
+                    opacity: { xs: 0, md: 0 },
+                    overflow: "hidden",
+                    whiteSpace: "nowrap",
+                    transition: "all 0.3s ease",
+                    color: "#555",
+                  }}
+                >
+                  Go Back
+                </MKTypography>
+              </MKButton>
+            </MKBox>
             {/* Anime poster */}
             <Grid item xs={12} md={4} lg={3} sx={{ display: "flex", justifyContent: "center" }}>
               <Box

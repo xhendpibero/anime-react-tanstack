@@ -1,8 +1,7 @@
-
-// Anime React base styles
+// AnimeHub base styles
 import borders from "assets/theme/base/borders";
 
-// Anime React helper functions
+// AnimeHub helper functions
 import pxToRem from "assets/theme/functions/pxToRem";
 
 const { borderRadius } = borders;

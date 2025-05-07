@@ -7,7 +7,7 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Pagination from "@mui/material/Pagination";
 
-// Anime React components
+// AnimeHub components
 import MKBox from "components/MKBox";
 
 function PaginationSection({ totalPages, currentPage, onPageChange }) {

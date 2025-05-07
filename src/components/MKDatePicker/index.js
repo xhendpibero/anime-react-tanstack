@@ -1,4 +1,3 @@
-
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
@@ -8,7 +7,7 @@ import Flatpickr from "react-flatpickr";
 // react-flatpickr styles
 import "flatpickr/dist/flatpickr.css";
 
-// Anime React components
+// AnimeHub components
 import MKInput from "components/MKInput";
 
 function MKDatePicker({ input, ...rest }) {

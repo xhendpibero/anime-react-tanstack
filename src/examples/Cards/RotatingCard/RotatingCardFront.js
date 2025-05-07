@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import Icon from "@mui/material/Icon";
 import { Box } from "@mui/material";
 
-// Anime React components
+// AnimeHub components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 

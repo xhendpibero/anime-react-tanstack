@@ -1,4 +1,3 @@
-
 export default {
   defaultProps: {
     disableGutters: true,

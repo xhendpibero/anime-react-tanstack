@@ -1,10 +1,9 @@
-
-// Anime React base styles
+// AnimeHub base styles
 import colors from "assets/theme/base/colors";
 import borders from "assets/theme/base/borders";
 import typography from "assets/theme/base/typography";
 
-// Anime React helper functions
+// AnimeHub helper functions
 import pxToRem from "assets/theme/functions/pxToRem";
 
 const { light, text, dark } = colors;

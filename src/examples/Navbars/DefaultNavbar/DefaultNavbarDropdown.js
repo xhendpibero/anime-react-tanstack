@@ -1,4 +1,3 @@
-
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
@@ -9,7 +8,7 @@ import { Link } from "react-router-dom";
 import Collapse from "@mui/material/Collapse";
 import Icon from "@mui/material/Icon";
 
-// Anime React components
+// AnimeHub components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 

@@ -1,19 +1,33 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { InputBase, IconButton, Box } from "@mui/material";
+import {
+  InputBase,
+  IconButton,
+  Box,
+  Slide,
+  Paper,
+  useMediaQuery,
+  useTheme,
+  Avatar,
+} from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
+import MovieFilterIcon from "@mui/icons-material/MovieFilter";
 
 // MUI components
 import Container from "@mui/material/Container";
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
+import MKButton from "components/MKButton";
 
 function DefaultNavbar({ brand, transparent, light, sticky, relative, onChange }) {
   const location = useLocation();
   const navigate = useNavigate();
   const [localSearchValue, setLocalSearchValue] = React.useState("");
+  const [isSearchFocused, setIsSearchFocused] = useState(false);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   // Extract search value from URL on component mount and when URL changes
   useEffect(() => {
@@ -88,81 +102,161 @@ function DefaultNavbar({ brand, transparent, light, sticky, relative, onChange }
   return (
     <Container sx={sticky ? { position: "sticky", top: 0, zIndex: 10 } : null}>
       <MKBox
-        py={1}
-        px={{ xs: 4, sm: transparent ? 2 : 3, lg: transparent ? 0 : 2 }}
-        my={relative ? 0 : 2}
+        py={2.5} // Increased vertical padding
+        px={{ xs: 2, sm: transparent ? 2 : 3, lg: transparent ? 0 : 3 }}
+        my={relative ? 0 : 3} // Increased margin
         mx={relative ? 0 : 3}
         width={relative ? "100%" : "calc(100% - 48px)"}
         borderRadius="xl"
-        shadow={transparent ? "none" : "md"}
+        shadow={transparent ? "none" : "lg"} // Increased shadow
         color={light ? "white" : "dark"}
         position={relative ? "relative" : "absolute"}
         left={0}
         zIndex={3}
-        sx={({ palette: { transparent: transparentColor, white }, functions: { rgba } }) => ({
-          backgroundColor: transparent ? transparentColor.main : rgba(white.main, 0.8),
+        sx={({
+          palette: { transparent: transparentColor, white, primary },
+          functions: { rgba },
+        }) => ({
+          backgroundColor: transparent ? transparentColor.main : rgba(white.main, 0.85),
           backdropFilter: transparent ? "none" : `saturate(200%) blur(30px)`,
+          borderBottom: `1px solid ${rgba(primary.main, 0.1)}`, // Subtle border
+          transition: "all 0.3s ease-in-out",
+          "&:hover": {
+            boxShadow: transparent ? "none" : theme.shadows[4],
+          },
         })}
       >
         <MKBox display="flex" justifyContent="space-between" alignItems="center">
+          {/* Brand Logo and Name */}
           <MKBox
             component={Link}
             to="/"
             lineHeight={1}
             py={transparent ? 1.5 : 0.75}
             pl={relative || transparent ? 0 : { xs: 0, lg: 1 }}
+            display="flex"
+            alignItems="center"
+            sx={{ textDecoration: "none" }}
           >
-            <MKTypography variant="button" fontWeight="bold" color={light ? "white" : "dark"}>
-              {brand}
-            </MKTypography>
-          </MKBox>
-          <MKBox ml={{ xs: "auto", lg: 0 }} display="flex" alignItems="center">
-            <Box
+            <Avatar
               sx={{
-                position: "relative",
-                border: "1px solid",
-                borderColor: "divider",
-                borderRadius: "xl",
-                backgroundColor: (theme) => theme.palette.grey[100],
+                bgcolor: theme.palette.primary.main,
+                width: 45,
+                height: 45,
+                mr: 1.5,
+                boxShadow: "0 3px 10px rgba(0,0,0,0.15)",
+                transition: "transform 0.3s ease",
                 "&:hover": {
-                  backgroundColor: (theme) => theme.palette.grey[200],
+                  transform: "scale(1.05)",
                 },
-                width: { xs: "180px", sm: "250px", md: "300px" },
-                mx: 2,
               }}
             >
-              <IconButton sx={{ p: "10px", position: "absolute", left: 0 }} aria-label="search">
+              <MovieFilterIcon />
+            </Avatar>
+            <Box>
+              <MKTypography
+                variant="h5"
+                fontWeight="bold"
+                color={light ? "white" : "dark"}
+                sx={{
+                  fontSize: { xs: "1.25rem", md: "1.5rem" },
+                  letterSpacing: "-0.5px",
+                }}
+              >
+                {brand}
+              </MKTypography>
+              <MKTypography
+                variant="caption"
+                fontWeight="regular"
+                color={light ? "white" : "text.secondary"}
+                sx={{ display: { xs: "none", sm: "block" } }}
+              >
+                Your Anime Encyclopedia
+              </MKTypography>
+            </Box>
+          </MKBox>
+
+          {/* Search Bar */}
+          <MKBox ml={{ xs: "auto", lg: 0 }} display="flex" alignItems="center">
+            <Paper
+              elevation={isSearchFocused ? 8 : 1}
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                width: { xs: "180px", sm: "280px", md: "350px" },
+                height: 50,
+                px: 2,
+                py: 1,
+                mx: 2,
+                borderRadius: 25, // Pill shaped
+                transition: "all 0.3s ease",
+                backgroundColor: isSearchFocused ? "#ffffff" : theme.palette.grey[100],
+                border: isSearchFocused
+                  ? `2px solid ${theme.palette.primary.main}`
+                  : "1px solid rgba(0,0,0,0.08)",
+                "&:hover": {
+                  backgroundColor: "#ffffff",
+                  transform: "translateY(-2px)",
+                  boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
+                },
+              }}
+            >
+              <IconButton
+                sx={{
+                  p: "8px",
+                  color: isSearchFocused ? theme.palette.primary.main : "action.active",
+                }}
+                aria-label="search"
+              >
                 <SearchIcon />
               </IconButton>
               <InputBase
                 sx={{
-                  ml: 5,
+                  ml: 1,
                   flex: 1,
-                  fontSize: "0.875rem",
-                  width: "calc(100% - 80px)",
+                  fontSize: "1rem",
+                  fontWeight: 500,
+                  "& .MuiInputBase-input": {
+                    padding: "8px 0",
+                  },
                 }}
-                placeholder="Search for anime..."
+                placeholder={isMobile ? "Search anime..." : "Discover your next favorite anime..."}
                 inputProps={{ "aria-label": "search anime" }}
                 value={localSearchValue}
                 onChange={handleSearchChange}
                 onKeyDown={handleKeyDown}
+                onFocus={() => setIsSearchFocused(true)}
+                onBlur={() => setIsSearchFocused(false)}
               />
-              {localSearchValue && (
+              <Slide direction="left" in={!!localSearchValue} mountOnEnter unmountOnExit>
                 <IconButton
                   sx={{
-                    p: "5px",
-                    position: "absolute",
-                    right: 5,
-                    top: "50%",
-                    transform: "translateY(-50%)",
+                    p: "6px",
+                    color: theme.palette.grey[500],
+                    "&:hover": {
+                      color: theme.palette.error.main,
+                      backgroundColor: theme.palette.grey[100],
+                    },
                   }}
                   aria-label="clear search"
                   onClick={clearSearch}
                 >
                   <CloseIcon fontSize="small" />
                 </IconButton>
-              )}
-            </Box>
+              </Slide>
+            </Paper>
+
+            {/* Optional: Add a search button for mobile */}
+            {isMobile && (
+              <MKButton
+                variant="gradient"
+                color="primary"
+                size="small"
+                sx={{ display: { xs: "none", sm: "flex" } }}
+              >
+                Search
+              </MKButton>
+            )}
           </MKBox>
         </MKBox>
       </MKBox>
@@ -172,7 +266,7 @@ function DefaultNavbar({ brand, transparent, light, sticky, relative, onChange }
 
 // Setting default values for the props of DefaultNavbar
 DefaultNavbar.defaultProps = {
-  brand: "Anime",
+  brand: "AnimeHub",
   transparent: false,
   light: false,
   action: false,

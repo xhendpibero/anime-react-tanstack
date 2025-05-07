@@ -1,5 +1,4 @@
-
-// Anime React helper functions
+// AnimeHub helper functions
 import pxToRem from "assets/theme/functions/pxToRem";
 
 export default {

@@ -1,7 +1,7 @@
-// Anime React base styles
+// AnimeHub base styles
 import breakpoints from "assets/theme/base/breakpoints";
 
-// Anime React helper functions
+// AnimeHub helper functions
 import pxToRem from "assets/theme/functions/pxToRem";
 
 const {

@@ -1,9 +1,8 @@
-
-// Anime React base styles
+// AnimeHub base styles
 import borders from "assets/theme/base/borders";
 import colors from "assets/theme/base/colors";
 
-// Anime React helper functions
+// AnimeHub helper functions
 import pxToRem from "assets/theme/functions/pxToRem";
 import linearGradient from "assets/theme/functions/linearGradient";
 

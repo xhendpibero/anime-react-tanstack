@@ -10,7 +10,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 
-// Anime React themes
+// AnimeHub themes
 import theme from "assets/theme";
 import Presentation from "layouts/pages/presentation";
 import AnimeDetailPage from "layouts/pages/presentation/detail";

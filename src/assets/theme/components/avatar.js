@@ -1,4 +1,4 @@
-// Anime React base styles
+// AnimeHub base styles
 import borders from "assets/theme/base/borders";
 
 const { borderRadius } = borders;

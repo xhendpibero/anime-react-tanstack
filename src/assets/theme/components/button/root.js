@@ -1,9 +1,8 @@
-
-// Anime React Base Styles
+// AnimeHub Base Styles
 import typography from "assets/theme/base/typography";
 import borders from "assets/theme/base/borders";
 
-// Anime React Helper Functions
+// AnimeHub Helper Functions
 import pxToRem from "assets/theme/functions/pxToRem";
 
 const { fontWeightBold, size } = typography;

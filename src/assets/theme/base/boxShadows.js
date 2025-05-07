@@ -1,14 +1,13 @@
-
 /**
- * The base box-shadow styles for the Anime React.
+ * The base box-shadow styles for the AnimeHub.
  * You can add new box-shadow using this file.
- * You can customized the box-shadow for the entire Anime React using thie file.
+ * You can customized the box-shadow for the entire AnimeHub using thie file.
  */
 
-// Anime React Base Styles
+// AnimeHub Base Styles
 import colors from "assets/theme/base/colors";
 
-// Anime React Helper Functions
+// AnimeHub Helper Functions
 import boxShadow from "assets/theme/functions/boxShadow";
 
 const { black, white, tabs, coloredShadows } = colors;

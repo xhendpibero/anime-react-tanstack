@@ -1,5 +1,4 @@
-
-// Anime React base styles
+// AnimeHub base styles
 import colors from "assets/theme/base/colors";
 
 const { text } = colors;

@@ -1,8 +1,7 @@
-
 // @mui material components
 import { styled } from "@mui/material/styles";
 
-// Anime React components
+// AnimeHub components
 import MKButton from "components/MKButton";
 
 export default styled(MKButton)(({ theme, ownerState }) => {

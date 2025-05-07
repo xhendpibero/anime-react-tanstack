@@ -1,11 +1,10 @@
-
-// Anime React base styles
+// AnimeHub base styles
 import boxShadows from "assets/theme/base/boxShadows";
 import typography from "assets/theme/base/typography";
 import colors from "assets/theme/base/colors";
 import borders from "assets/theme/base/borders";
 
-// Anime React helper functions
+// AnimeHub helper functions
 import pxToRem from "assets/theme/functions/pxToRem";
 
 const { lg } = boxShadows;

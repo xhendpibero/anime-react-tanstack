@@ -8,7 +8,7 @@ import PropTypes from "prop-types";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
-// Anime React components
+// AnimeHub components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 import { Stack } from "@mui/material";

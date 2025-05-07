@@ -1,9 +1,8 @@
-
-// Anime React base styles
+// AnimeHub base styles
 import typography from "assets/theme/base/typography";
 import colors from "assets/theme/base/colors";
 
-// Anime React helper functions
+// AnimeHub helper functions
 import pxToRem from "assets/theme/functions/pxToRem";
 import rgba from "assets/theme/functions/rgba";
 

@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 // @mui material components
 import Card from "@mui/material/Card";
 
-// Anime React components
+// AnimeHub components
 import MKBox from "components/MKBox";
 
 function RotatingCard({ children }) {

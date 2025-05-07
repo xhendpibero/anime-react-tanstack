@@ -17,12 +17,12 @@ import Alert from "@mui/material/Alert";
 import SentimentDissatisfiedIcon from "@mui/icons-material/SentimentDissatisfied";
 import SearchOffIcon from "@mui/icons-material/SearchOff";
 
-// Anime React components
+// AnimeHub components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 import MKButton from "components/MKButton";
 
-// Anime React examples
+// AnimeHub examples
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import DefaultFooter from "examples/Footers/DefaultFooter";
 
@@ -246,7 +246,7 @@ function Presentation() {
 
   return (
     <>
-      <DefaultNavbar brand="Anime React" sticky value={searchQuery} onChange={handleSearchChange} />
+      <DefaultNavbar brand="AnimeHub" sticky value={searchQuery} onChange={handleSearchChange} />
       <MKBox
         minHeight="75vh"
         width="100%"
@@ -271,7 +271,7 @@ function Presentation() {
                 },
               })}
             >
-              Anime React{" "}
+              AnimeHub
             </MKTypography>
             <MKTypography
               variant="body1"
@@ -280,8 +280,22 @@ function Presentation() {
               px={{ xs: 6, lg: 12 }}
               mt={1}
             >
-              Free & Open Source Web UI Kit built over ReactJS &amp; MUI. Join over 1.6 million
-              developers around the world.
+              A modern React application built by Dendy Sapto Adi showcasing proficiency in React,
+              Material-UI, RESTful API integration, and responsive design. This portfolio project
+              demonstrates the same attention to detail and user experience focus I would bring to
+              the development team at YoPrint.
+            </MKTypography>
+            <MKTypography
+              variant="body2"
+              color="white"
+              textAlign="center"
+              px={{ xs: 6, lg: 12 }}
+              mt={2}
+              opacity={0.8}
+            >
+              Featuring real-time data fetching, clean component architecture, and performant
+              rendering techniques that would translate well to YoPrint's dynamic e-commerce
+              environment.
             </MKTypography>
           </Grid>
         </Container>

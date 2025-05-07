@@ -4,7 +4,7 @@ import LinkedinIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 
-// Anime React components
+// AnimeHub components
 import MKTypography from "components/MKTypography";
 
 // Images
@@ -14,7 +14,7 @@ const date = new Date().getFullYear();
 
 export default {
   brand: {
-    name: "Anime React",
+    name: "AnimeHub",
     image: logoCT,
     route: "/",
   },
@@ -74,7 +74,7 @@ export default {
   ],
   copyright: (
     <MKTypography variant="button" fontWeight="regular">
-      All rights reserved. Copyright &copy; {date} Anime React by{" "}
+      All rights reserved. Copyright &copy; {date} AnimeHub by{" "}
       <MKTypography
         component="a"
         href="#"

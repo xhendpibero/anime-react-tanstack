@@ -1,8 +1,7 @@
-
 /**
- * The base breakpoints for the Anime React.
+ * The base breakpoints for the AnimeHub.
  * You can add new breakpoints using this file.
- * You can customized the breakpoints for the entire Anime React using thie file.
+ * You can customized the breakpoints for the entire AnimeHub using thie file.
  */
 
 export default {

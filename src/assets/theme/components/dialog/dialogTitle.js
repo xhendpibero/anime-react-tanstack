@@ -1,8 +1,7 @@
-
-// Anime React base styles
+// AnimeHub base styles
 import typography from "assets/theme/base/typography";
 
-// Anime React helper functions
+// AnimeHub helper functions
 import pxToRem from "assets/theme/functions/pxToRem";
 
 const { size } = typography;

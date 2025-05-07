@@ -1,8 +1,7 @@
-
 /**
- * The base colors for the Anime React.
+ * The base colors for the AnimeHub.
  * You can add new color using this file.
- * You can customized the colors for the entire Anime React using thie file.
+ * You can customized the colors for the entire AnimeHub using thie file.
  */
 
 export default {

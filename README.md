@@ -6,29 +6,29 @@ A simple React application that displays a list of anime titles and shows detail
 
 ## Table of Contents
 
-- [Features](#features)  
-- [Demo](#demo)  
-- [Tech Stack](#tech-stack)  
-- [Getting Started](#getting-started)  
-  - [Prerequisites](#prerequisites)  
-  - [Installation](#installation)  
-  - [Environment Variables](#environment-variables)  
-- [Available Scripts](#available-scripts)  
-- [Project Structure](#project-structure)  
-- [API Reference](#api-reference)  
-- [Contributing](#contributing)  
-- [License](#license)  
-- [Contact](#contact)  
+- [Features](#features)
+- [Demo](#demo)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Environment Variables](#environment-variables)
+- [Available Scripts](#available-scripts)
+- [Project Structure](#project-structure)
+- [API Reference](#api-reference)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
 ---
 
 ## Features
 
-- Browse a paginated list of popular anime  
-- Search for anime by title  
-- View detailed information (synopsis, episodes, score, genres)  
-- Responsive design (mobile & desktop)  
-- Error handling & loading states  
+- Browse a paginated list of popular anime
+- Search for anime by title
+- View detailed information (synopsis, episodes, score, genres)
+- Responsive design (mobile & desktop)
+- Error handling & loading states
 
 ---
 
@@ -42,11 +42,11 @@ Live Demo: https://anime.ti2k.space
 
 ## Tech Stack
 
-- React  
-- React Router v6  
-- Axios (for HTTP requests)  
-- Tailwind CSS (for styling)  
-- Jikan REST API  
+- React
+- React Router v6
+- Axios (for HTTP requests)
+- Tailwind CSS (for styling)
+- Jikan REST API
 
 ---
 
@@ -54,34 +54,37 @@ Live Demo: https://anime.ti2k.space
 
 ### Prerequisites
 
-- Node.js v16+  
-- npm v8+ or yarn v1.22+  
+- Node.js v16+
+- npm v8+ or yarn v1.22+
 
 ### Installation
 
-1. Clone the repo  
+1. Clone the repo
+
    ```bash
    git clone https://github.com/xhendpibero/anime-react-tanstack.git
    cd anime-list
    ```
 
-2. Install dependencies  
+2. Install dependencies
+
    ```bash
    npm install
    # or
    yarn install
    ```
 
-3. Create a `.env` file in the project root (see below).  
+3. Create a `.env` file in the project root (see below).
 
-4. Run the development server  
+4. Run the development server
+
    ```bash
    npm start
    # or
    yarn start
    ```
 
-5. Open http://localhost:3000 in your browser.  
+5. Open http://localhost:3000 in your browser.
 
 ### Environment Variables
 
@@ -98,13 +101,13 @@ REACT_APP_API_BASE_URL=https://api.jikan.moe/v4
 In the project directory, you can run:
 
 - `npm start`  
-  Runs the app in development mode.  
+  Runs the app in development mode.
 - `npm run build`  
-  Bundles the app into static files for production.  
+  Bundles the app into static files for production.
 - `npm test`  
-  Launches the test runner (if tests are configured).  
+  Launches the test runner (if tests are configured).
 - `npm run lint`  
-  Lints source code with ESLint.  
+  Lints source code with ESLint.
 
 ---
 
@@ -141,8 +144,8 @@ anime-list/
 
 We use the [Jikan API v4](https://docs.api.jikan.moe/):
 
-- `GET /anime` – List anime (with pagination & search)  
-- `GET /anime/{id}` – Anime details  
+- `GET /anime` – List anime (with pagination & search)
+- `GET /anime/{id}` – Anime details
 
 All requests are handled in `src/services/animeService.js`.
 
@@ -150,11 +153,11 @@ All requests are handled in `src/services/animeService.js`.
 
 ## Contributing
 
-1. Fork this repository  
-2. Create your feature branch (`git checkout -b feature/MyFeature`)  
-3. Commit your changes (`git commit -m 'Add MyFeature'`)  
-4. Push to the branch (`git push origin feature/MyFeature`)  
-5. Open a Pull Request  
+1. Fork this repository
+2. Create your feature branch (`git checkout -b feature/MyFeature`)
+3. Commit your changes (`git commit -m 'Add MyFeature'`)
+4. Push to the branch (`git push origin feature/MyFeature`)
+5. Open a Pull Request
 
 Please ensure your code follows the existing style and includes relevant tests or documentation updates.
 
