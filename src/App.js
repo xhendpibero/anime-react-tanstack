@@ -12,8 +12,8 @@ import CssBaseline from "@mui/material/CssBaseline";
 
 // AnimeHub themes
 import theme from "assets/theme";
-import Presentation from "layouts/pages/presentation";
-import AnimeDetailPage from "layouts/pages/presentation/detail";
+import Anime from "layouts/pages/anime";
+import AnimeDetailPage from "layouts/pages/anime/detail";
 
 const queryClient = new QueryClient();
 
@@ -31,7 +31,7 @@ export default function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Routes>
-          <Route path="/" element={<Presentation />} />
+          <Route path="/" element={<Anime />} />
           <Route path="/anime/:id" element={<AnimeDetailPage />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
